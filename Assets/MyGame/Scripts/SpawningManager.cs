@@ -6,14 +6,28 @@ using UnityEngine.UI;
 public class SpawningManager : MonoBehaviour
 {
     [SerializeField] GameObject[] fruitPrefab;
-    [SerializeField] Sprite[] spawnableFruits;
+    [SerializeField] float respawnTime = 1.0f;
     [SerializeField] Vector2 screenBounds;
 
     void Start()
     {
-        int arrayIndex = Random.Range(0, fruitPrefab.Length);
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-        Debug.Log(arrayIndex.ToString());
+        StartCoroutine(fruitWave());
+    }
+    private void SpawnFruits()
+    {
+        int arrayIndex = Random.Range(0, fruitPrefab.Length);
+        // Debug.Log(arrayIndex.ToString());
+        GameObject spawningArea = Instantiate(fruitPrefab[arrayIndex]) as GameObject;
+        spawningArea.transform.position = new Vector2(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y * 2);
+    }
+    IEnumerator fruitWave()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(respawnTime);
+            SpawnFruits();
+        }
     }
 
     void Update()
