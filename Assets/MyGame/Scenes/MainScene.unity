@@ -1142,6 +1142,7 @@ MonoBehaviour:
   playerSpeed: {x: 50, y: 0}
   rb: {fileID: 261874466}
   negativePlayerSpeed: {x: 0, y: 0}
+  playerNameTextGO: {fileID: 1213183415}
 --- !u!4 &2089191400
 Transform:
   m_ObjectHideFlags: 0

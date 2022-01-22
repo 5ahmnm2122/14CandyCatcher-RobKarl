@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
@@ -37,13 +38,16 @@ public class TimeManager : MonoBehaviour
         timeInt = timeInt - 5;
     }
     
+    
     void Update()
     {
+        //Game Over
         timerText.text = timeInt.ToString() + "s";
         if(timeInt==0)
         {
             // Debug.Log("GameOver");
             StopAllCoroutines();
+            SceneManager.LoadScene(2);
         }
     }
 }

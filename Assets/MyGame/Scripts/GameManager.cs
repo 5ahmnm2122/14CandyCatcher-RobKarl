@@ -10,10 +10,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] Vector2 playerSpeed;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Vector2 negativePlayerSpeed;
+    [SerializeField] Text playerNameTextGO;
+    // public static string playerName;
 
     void Start()
     {
         negativePlayerSpeed = playerSpeed*-1;
+        // playerNameTextGO.text = playerName;
     }
     void Update() 
     {

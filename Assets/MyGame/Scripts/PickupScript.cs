@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PickupScript : MonoBehaviour
 {
@@ -30,6 +31,13 @@ public class PickupScript : MonoBehaviour
             scoreText.text = scoreInt.ToString();
             timeManagerScript.RemoveTime();
             Destroy(other.gameObject);
+        }
+    }
+    void Update()
+    {
+        if(scoreInt==-1)
+        {
+            SceneManager.LoadScene(2);
         }
     }
 }
