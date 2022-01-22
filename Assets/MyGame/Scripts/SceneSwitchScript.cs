@@ -8,8 +8,11 @@ public class SceneSwitchScript : MonoBehaviour
 {
     [SerializeField] Text inputField;
     [SerializeField] Text disclaimerText;
-    // [SerializeField] GameManager gameManagerScript;
-    // public static string playerName;
+    public string playerNameText;
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     public void SceneSwitch()
     {
         if(inputField.text=="")
@@ -20,7 +23,7 @@ public class SceneSwitchScript : MonoBehaviour
         else
         {
         SceneManager.LoadScene(1);
-        // playerName = inputField.text;
+        playerNameText = inputField.text;
         }
         // Debug.Log("SceneSwitch");
     }

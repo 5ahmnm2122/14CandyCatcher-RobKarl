@@ -8,6 +8,6 @@ public class ReloadGameScript : MonoBehaviour
 {
     public void ReloadMainScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

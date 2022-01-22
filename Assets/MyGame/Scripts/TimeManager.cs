@@ -43,7 +43,7 @@ public class TimeManager : MonoBehaviour
     {
         //Game Over
         timerText.text = timeInt.ToString() + "s";
-        if(timeInt==0)
+        if(timeInt<=0)
         {
             // Debug.Log("GameOver");
             StopAllCoroutines();

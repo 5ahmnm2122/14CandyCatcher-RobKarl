@@ -11,12 +11,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Vector2 negativePlayerSpeed;
     [SerializeField] Text playerNameTextGO;
-    // public static string playerName;
+    public SceneSwitchScript sceneSwitchScripter;
 
     void Start()
     {
         negativePlayerSpeed = playerSpeed*-1;
-        // playerNameTextGO.text = playerName;
+        sceneSwitchScripter = GameObject.FindGameObjectWithTag("SceneSwitchBoi").GetComponent<SceneSwitchScript>();
+        playerNameTextGO.text = sceneSwitchScripter.playerNameText;
     }
     void Update() 
     {
@@ -34,8 +35,6 @@ public class GameManager : MonoBehaviour
             // Debug.Log("D wird gedrueckt");
             rb.AddForce(playerSpeed, ForceMode2D.Force);
         }
-        
-        
     }
 
 }

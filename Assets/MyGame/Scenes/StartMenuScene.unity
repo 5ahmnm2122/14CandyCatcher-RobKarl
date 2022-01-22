@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 1847567815}
   m_Layer: 0
   m_Name: SceneSwitch
-  m_TagString: Untagged
+  m_TagString: SceneSwitchBoi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -917,6 +917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 630097116}
   disclaimerText: {fileID: 539156262}
+  playerNameText: 
 --- !u!4 &1847567816
 Transform:
   m_ObjectHideFlags: 0

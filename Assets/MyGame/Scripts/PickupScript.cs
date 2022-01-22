@@ -9,10 +9,12 @@ public class PickupScript : MonoBehaviour
     [SerializeField] Text scoreText;
     [SerializeField] int scoreInt;
     public TimeManager timeManagerScript;
+    // public SceneSwitchScript sceneSwitchScriptBoiii;
     
     void Start()
     {
         scoreText.text = "0";
+        // sceneSwitchScriptBoiii = GameObject.FindGameObjectWithTag("SceneSwitchBoi").GetComponent<SceneSwitchScript>();
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
@@ -35,7 +37,8 @@ public class PickupScript : MonoBehaviour
     }
     void Update()
     {
-        if(scoreInt==-1)
+        //losing
+        if(scoreInt<=-1)
         {
             SceneManager.LoadScene(2);
         }
