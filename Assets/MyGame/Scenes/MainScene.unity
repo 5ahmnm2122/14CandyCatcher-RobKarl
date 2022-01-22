@@ -999,6 +999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1051253107}
   scoreInt: 0
+  timeManagerScript: {fileID: 1482776811}
 --- !u!61 &1662610416
 BoxCollider2D:
   m_ObjectHideFlags: 0

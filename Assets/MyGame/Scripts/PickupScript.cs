@@ -7,6 +7,7 @@ public class PickupScript : MonoBehaviour
 {
     [SerializeField] Text scoreText;
     [SerializeField] int scoreInt;
+    public TimeManager timeManagerScript;
     
     void Start()
     {
@@ -14,21 +15,21 @@ public class PickupScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        //Good Pickups
         if(other.tag=="Collectible")
         {
             scoreInt = scoreInt + 1;
             scoreText.text = scoreInt.ToString();
+            timeManagerScript.AddTime();
             Destroy(other.gameObject);
         }
+        //Bad Pickups
         if(other.tag=="BadCollectible")
         {
             scoreInt = scoreInt - 1;
             scoreText.text = scoreInt.ToString();
+            timeManagerScript.RemoveTime();
             Destroy(other.gameObject);
         }
-    }
-    void Update()
-    {
-        //update
     }
 }
