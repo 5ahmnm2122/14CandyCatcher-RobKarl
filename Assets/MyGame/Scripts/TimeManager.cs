@@ -8,6 +8,7 @@ public class TimeManager : MonoBehaviour
 {
     [SerializeField] Text timerText;
     [SerializeField] int timeInt;
+    [SerializeField] GameObject basketMonkey;
     void Start()
     {
         timerText.text = timeInt.ToString();
@@ -46,6 +47,8 @@ public class TimeManager : MonoBehaviour
         if(timeInt<=0)
         {
             // Debug.Log("GameOver");
+            basketMonkey.transform.DetachChildren();
+            Destroy(basketMonkey);
             StopAllCoroutines();
             SceneManager.LoadScene(2);
         }

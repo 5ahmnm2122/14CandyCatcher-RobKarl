@@ -7,14 +7,18 @@ using UnityEngine.SceneManagement;
 public class PickupScript : MonoBehaviour
 {
     [SerializeField] Text scoreText;
-    [SerializeField] int scoreInt;
+    public int scoreInt;
     public TimeManager timeManagerScript;
-    // public SceneSwitchScript sceneSwitchScriptBoiii;
+    [SerializeField] GameObject basketMonkey;
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(basketMonkey);
+    }
     
     void Start()
     {
         scoreText.text = "0";
-        // sceneSwitchScriptBoiii = GameObject.FindGameObjectWithTag("SceneSwitchBoi").GetComponent<SceneSwitchScript>();
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
@@ -40,6 +44,8 @@ public class PickupScript : MonoBehaviour
         //losing
         if(scoreInt<=-1)
         {
+            basketMonkey.transform.DetachChildren();
+            Destroy(basketMonkey);
             SceneManager.LoadScene(2);
         }
     }

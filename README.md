@@ -7,7 +7,9 @@ Target platform:
 WebGL
 
 Third party material:
-100% selfmade :)
+Screen Boundaries Idea:
+https://www.youtube.com/watch?v=ailbszpt_AI
+The rest is selfmade (with some help of the Unity API)
 
 Project state:
 95% finished

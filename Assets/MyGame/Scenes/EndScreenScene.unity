@@ -630,6 +630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc12e81a1701f4409eed8ecaf65c0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupScriptVar: {fileID: 0}
+  sceneSwitchScripter: {fileID: 0}
+  scorePlusNameText: {fileID: 1455875166}
 --- !u!4 &1593948030
 Transform:
   m_ObjectHideFlags: 0

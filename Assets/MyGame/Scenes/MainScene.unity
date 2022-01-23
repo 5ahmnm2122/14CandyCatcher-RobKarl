@@ -298,12 +298,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 305921128}
-  - {fileID: 261874464}
   - {fileID: 1051253106}
   - {fileID: 916011954}
   - {fileID: 1213183414}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -338,12 +337,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261874463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -183, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -3.0500002, z: 90}
+  m_LocalScale: {x: 0.016666668, y: 0.016666668, z: 0.016666668}
   m_Children:
   - {fileID: 1662610414}
-  m_Father: {fileID: 148109904}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &261874465
 SpriteRenderer:
@@ -516,7 +515,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 148109904}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -555,7 +554,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 30
   m_Text: Timer
 --- !u!222 &916011956
 CanvasRenderer:
@@ -595,7 +594,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 148109904}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -674,7 +673,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 148109904}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -948,6 +947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 916011955}
   timeInt: 30
+  basketMonkey: {fileID: 261874463}
 --- !u!1 &1662610413
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +961,7 @@ GameObject:
   - component: {fileID: 1662610415}
   m_Layer: 0
   m_Name: BasketCollider
-  m_TagString: Untagged
+  m_TagString: PickupScriptHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1000,6 +1000,7 @@ MonoBehaviour:
   scoreText: {fileID: 1051253107}
   scoreInt: 0
   timeManagerScript: {fileID: 1482776811}
+  basketMonkey: {fileID: 261874463}
 --- !u!61 &1662610416
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1057,7 +1058,7 @@ Transform:
   - {fileID: 2089191400}
   - {fileID: 1482776810}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2051017608
 GameObject:
@@ -1143,6 +1144,7 @@ MonoBehaviour:
   rb: {fileID: 261874466}
   negativePlayerSpeed: {x: 0, y: 0}
   playerNameTextGO: {fileID: 1213183415}
+  sceneSwitchScripter: {fileID: 0}
 --- !u!4 &2089191400
 Transform:
   m_ObjectHideFlags: 0
