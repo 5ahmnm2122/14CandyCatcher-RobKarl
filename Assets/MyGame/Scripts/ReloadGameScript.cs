@@ -6,20 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class ReloadGameScript : MonoBehaviour
 {
-    public PickupScript pickupScriptVar;
-    public SceneSwitchScript sceneSwitchScripter;
+    public GameObject pickupScriptVar;
+    public GameObject sceneSwitchScripter;
     [SerializeField] Text scorePlusNameText;
     void Start()
     {
-        // scorePlusNameText.text = "Test";
-        pickupScriptVar = GameObject.FindGameObjectWithTag("PickupScriptHolder").GetComponent<PickupScript>();
-        sceneSwitchScripter = GameObject.FindGameObjectWithTag("SceneSwitchBoi").GetComponent<SceneSwitchScript>();
-        scorePlusNameText.text = pickupScriptVar.scoreInt.ToString() + ", " + sceneSwitchScripter.playerNameText;
-        // Debug.Log(pickupScriptVar.scoreInt.ToString());
-        // scorePlusNameText.text = sceneSwitchScripter.playerNameText + ", " + pickupScriptVar.scoreInt.ToString();
+        //searches for static objects and assigns them to variable
+        pickupScriptVar = GameObject.FindGameObjectWithTag("PickupScriptHolder");
+        sceneSwitchScripter = GameObject.FindGameObjectWithTag("SceneSwitchBoi");
+        // scorePlusNameText.text = pickupScriptVar.scoreInt.ToString() + ", " + sceneSwitchScripter.playerNameText;
+        scorePlusNameText.text = "Score: " + pickupScriptVar.GetComponent<PickupScript>().scoreInt.ToString() + ", Name: " + sceneSwitchScripter.GetComponent<SceneSwitchScript>().playerNameText;
     }
     public void ReloadMainScene()
     {
+        Destroy(pickupScriptVar);
+        Destroy(sceneSwitchScripter);
         SceneManager.LoadScene(0);
     }
 }
