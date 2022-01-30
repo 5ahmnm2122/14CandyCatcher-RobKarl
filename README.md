@@ -1,6 +1,11 @@
+Playable game:
+https://5ahmnm2122.github.io/14CandyCatcher-RobKarl/index.html
+
 Project description:
+
 This project serves as a C# exercise for school. It is an endless arcade game by the name of "CandyCatcher".
 You have to catch different fruits and be careful not to catch any sweets, cause they will lower your score and timer.
+
 Development platform:
 OS: Windows 10, Game Engine: Unity 2020.3.18f1, Visual Studio Code
 
